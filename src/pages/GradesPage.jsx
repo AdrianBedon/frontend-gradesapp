@@ -1,8 +1,13 @@
+import { useContext, useEffect } from "react";
 import { GradesList } from "../components/GradesList";
-import { useGrades } from "../hooks/useGrades";
+import { GradeContext } from "../context/GradeContext";
 
 export const GradesPage = () => {
-  const { grades } = useGrades();
+  const { grades, getGrades } = useContext(GradeContext);
+
+  useEffect(() => {
+    getGrades();
+  }, []);
   return (
     <div className="container my-4">
       <h2>Grades App</h2>
@@ -13,7 +18,7 @@ export const GradesPage = () => {
               There are no grades to show!
             </div>
           ) : (
-            <GradesList grades={grades} />
+            <GradesList />
           )}
         </div>
       </div>

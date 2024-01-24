@@ -1,12 +1,16 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import { GradeProvider } from "../context/GradeProvider";
+import { GradesPage } from "../pages/GradesPage";
 
 export const GradeRoutes = () => {
   return (
     <>
-      <Routes>
-        <Route path="grades" element={<GradesPage />} />
-        <Route path="/" element={<Navigate to="/grades" />} />
-      </Routes>
+      <GradeProvider>
+        <Routes>
+          <Route path="/" element={<GradesPage />} />
+          <Route path="/" element={<Navigate to="grades" />} />
+        </Routes>
+      </GradeProvider>
     </>
   );
 };

@@ -1,9 +1,11 @@
+import { Route, Routes } from "react-router-dom";
 import { GradesPage } from "./pages/GradesPage";
+import { GradeRoutes } from "./routes/GradeRoutes";
 
 export const GradesApp = () => {
   return (
-    <>
-      <GradesPage />
-    </>
+    <Routes>
+      <Route exact path="grades/*" element={<GradeRoutes />} />
+    </Routes>
   );
 };
