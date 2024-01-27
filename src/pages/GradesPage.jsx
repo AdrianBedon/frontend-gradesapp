@@ -17,7 +17,7 @@ export const GradesPage = () => {
   );
 
   const { start1, start2, start3, end1, end2, end3, count1, count2, count3 } =
-    formatCalculateForm || {};
+    formatCalculateForm;
 
   useEffect(() => {
     getGrades();
