@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { GradesApp } from "./GradesApp.jsx";
-import { GradeProvider } from "./context/GradeProvider.jsx";
 import "./styles.css";
 import { BrowserRouter } from "react-router-dom";
 

@@ -5,7 +5,7 @@ import { GradeRoutes } from "./routes/GradeRoutes";
 export const GradesApp = () => {
   return (
     <Routes>
-      <Route exact path="grades/*" element={<GradeRoutes />} />
+      <Route exact path="*" element={<GradeRoutes />} />
     </Routes>
   );
 };

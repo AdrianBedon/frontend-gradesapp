@@ -1,10 +1,10 @@
 export const GradeRow = ({ id, name, grade, date }) => {
   return (
     <tr>
-      <td className="text-center">{id}</td>
-      <td className="text-center">{name}</td>
-      <td className="text-center">{grade}</td>
-      <td className="text-center">{date}</td>
+      <td>{id}</td>
+      <td>{name}</td>
+      <td>{grade}</td>
+      <td>{date}</td>
     </tr>
   );
 };

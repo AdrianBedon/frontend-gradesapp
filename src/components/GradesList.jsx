@@ -5,16 +5,18 @@ import { GradeContext } from "../context/GradeContext";
 export const GradesList = () => {
   const { grades } = useContext(GradeContext);
   return (
-    <>
-      <p>Listado de Calificaciones</p>
-      <div className="table-responsive">
-        <table className="table table-hover table-striped">
-          <thead className="table-dark">
+    <main className="table">
+      <section className="table__header">
+        <h3>Grades List</h3>
+      </section>
+      <section className="table__body">
+        <table>
+          <thead>
             <tr>
-              <th className="text-center">ID</th>
-              <th className="text-center">Name</th>
-              <th className="text-center">Grade</th>
-              <th className="text-center">Grade Date</th>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Grade</th>
+              <th>Grade Date</th>
             </tr>
           </thead>
           <tbody>
@@ -29,7 +31,7 @@ export const GradesList = () => {
             ))}
           </tbody>
         </table>
-      </div>
-    </>
+      </section>
+    </main>
   );
 };
