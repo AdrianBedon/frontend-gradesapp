@@ -154,8 +154,9 @@ export const GradesPage = () => {
                 onChange={(event) => setCountO3(event.target.value)}
               ></input>
             </div>
-            <button type="submit">Calculate Grades</button>
+            <button type="submit" className="btn btn-primary btn-custom">Calculate Grades</button>
           </form>
+          <p></p>
           {gradesT.length === 0 ? (
             <div className="alert alert-warning">
               There are no grades to show!

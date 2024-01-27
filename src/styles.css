@@ -8,7 +8,12 @@
 
 body {
   min-height: 100vh;
-  background-image: linear-gradient(rgba(205, 97, 85), rgba(100, 30, 22));
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 162, 0),
+    rgba(207, 195, 21),
+    rgba(0, 212, 255)
+  );
   display: flex;
   justify-content: center;
 }
@@ -94,6 +99,20 @@ tbody tr:hover {
 
 .ig-3 {
   background-color: rgba(128, 139, 150);
+}
+
+.btn-custom {
+  background-color: transparent;
+  border-color: black;
+  border-width: .15rem;
+  color: black;
+}
+
+.btn-custom:hover {
+  background-color: #fff5;
+  border-color: black;
+  border-width: .15rem;
+  color: white;
 }
 
 .container .row {
