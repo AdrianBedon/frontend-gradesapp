@@ -1,21 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { GradesList } from "../components/GradesList";
 import { GradeContext } from "../context/GradeContext";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import { TotalGradesList } from "../components/TotalGradesList";
 
 export const GradesPage = () => {
-  const [startD1, setStartD1] = useState(new Date());
-  const [endD1, setEndD1] = useState(new Date());
-  const [startD2, setStartD2] = useState(new Date());
-  const [endD2, setEndD2] = useState(new Date());
-  const [startD3, setStartD3] = useState(new Date());
-  const [endD3, setEndD3] = useState(new Date());
-  const [countO1, setCountO1] = useState(0);
-  const [countO2, setCountO2] = useState(0);
-  const [countO3, setCountO3] = useState(0);
-
   const {
     grades,
     gradesT,
@@ -28,6 +16,9 @@ export const GradesPage = () => {
     initialFormatCalculateForm
   );
 
+  const { start1, start2, start3, end1, end2, end3, count1, count2, count3 } =
+    formatCalculateForm || {};
+
   useEffect(() => {
     getGrades();
   }, []);
@@ -35,23 +26,15 @@ export const GradesPage = () => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    const { start1, start2, start3, end1, end2, end3, count1, count2, count3 } =
-      formatCalculateForm || {};
-
-    const newFormatCalculateForm = {
-      start1: startD1,
-      start2: startD2,
-      start3: startD3,
-      end1: endD1,
-      end2: endD2,
-      end3: endD3,
-      count1: countO1,
-      count2: countO2,
-      count3: countO3,
-    };
-
-    setFormatCalculateForm(newFormatCalculateForm);
     calculateGrades(formatCalculateForm);
+  };
+
+  const onInputChange = ({ target }) => {
+    const { name, value } = target;
+    setFormatCalculateForm({
+      ...formatCalculateForm,
+      [name]: value,
+    });
   };
 
   return (
@@ -69,92 +52,97 @@ export const GradesPage = () => {
           <form onSubmit={onSubmit}>
             <div className="input-group mb-3">
               <span className="input-group-text ig-1">Start 1st Progress</span>
-              <DatePicker
+              <input
                 type="date"
+                id="start1"
+                name="start1"
                 className="form-control"
-                selected={startD1 || ""}
-                wrapperClassName="datePicker"
-                onChange={(date) => setStartD1(date)}
-                dateFormat={"yyyy-MM-dd"}
-              ></DatePicker>
+                value={start1}
+                onChange={onInputChange}
+              ></input>
               <span className="input-group-text ig-1">End 1st Progress</span>
-              <DatePicker
+              <input
+                id="end1"
+                name="end1"
                 type="date"
                 className="form-control"
-                selected={endD1 || ""}
-                wrapperClassName="datePicker"
-                onChange={(date) => setEndD1(date)}
-                dateFormat={"yyyy-MM-dd"}
-              ></DatePicker>
+                value={end1}
+                onChange={onInputChange}
+              ></input>
               <span className="input-group-text ig-1">Grades Quantity</span>
               <input
+                name="count1"
                 type="number"
                 className="form-control"
                 placeholder="0"
                 min="0"
-                value={countO1}
-                onChange={(event) => setCountO1(event.target.value)}
+                value={count1}
+                onChange={onInputChange}
               ></input>
             </div>
             <div className="input-group mb-3">
               <span className="input-group-text ig-2">Start 2nd Progress</span>
-              <DatePicker
+              <input
+                id="start2"
+                name="start2"
                 type="date"
                 className="form-control"
-                selected={startD2 || ""}
-                wrapperClassName="datePicker"
-                onChange={(date) => setStartD2(date)}
-                dateFormat={"yyyy-MM-dd"}
-              ></DatePicker>
+                value={start2}
+                onChange={onInputChange}
+              ></input>
               <span className="input-group-text ig-2">End 2nd Progress</span>
-              <DatePicker
+              <input
+                id="end2"
+                name="end2"
                 type="date"
                 className="form-control"
-                selected={endD2 || ""}
-                wrapperClassName="datePicker"
-                onChange={(date) => setEndD2(date)}
-                dateFormat={"yyyy-MM-dd"}
-              ></DatePicker>
+                value={end2}
+                onChange={onInputChange}
+              ></input>
               <span className="input-group-text ig-2">Grades Quantity</span>
               <input
                 type="number"
+                name="count2"
                 className="form-control"
                 placeholder="0"
                 min="0"
-                value={countO2}
-                onChange={(event) => setCountO2(event.target.value)}
+                value={count2}
+                onChange={onInputChange}
               ></input>
             </div>
             <div className="input-group mb-3">
               <span className="input-group-text ig-3">Start 3rd Progress</span>
-              <DatePicker
+              <input
+                id="start3"
+                name="start3"
                 type="date"
                 className="form-control"
-                selected={startD3 || ""}
-                wrapperClassName="datePicker"
-                onChange={(date) => setStartD3(date)}
-                dateFormat={"yyyy-MM-dd"}
-              ></DatePicker>
+                value={start3}
+                onChange={onInputChange}
+              ></input>
               <span className="input-group-text ig-3">End 3rd Progress</span>
-              <DatePicker
+              <input
+                id="end3"
+                name="end3"
                 type="date"
                 className="form-control"
-                selected={endD3 || ""}
-                wrapperClassName="datePicker"
-                onChange={(date) => setEndD3(date)}
-                dateFormat={"yyyy-MM-dd"}
-              ></DatePicker>
+                value={end3}
+                onChange={onInputChange}
+              ></input>
               <span className="input-group-text ig-3">Grades Quantity</span>
               <input
                 type="number"
+                name="count3"
                 className="form-control"
                 placeholder="0"
                 min="0"
-                value={countO3}
-                onChange={(event) => setCountO3(event.target.value)}
+                value={count3}
+                onChange={onInputChange}
               ></input>
             </div>
-            <button type="submit" className="btn btn-primary btn-custom">Calculate Grades</button>
+            <button type="submit" className="btn btn-primary btn-custom">
+              Calculate Grades
+            </button>
           </form>
           <p></p>
           {gradesT.length === 0 ? (
