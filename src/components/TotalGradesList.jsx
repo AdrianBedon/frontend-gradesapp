@@ -18,6 +18,7 @@ export const TotalGradesList = () => {
               <th>Progress 1</th>
               <th>Progress 2</th>
               <th>Progress 3</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>

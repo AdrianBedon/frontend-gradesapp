@@ -109,7 +109,7 @@ tbody tr:hover {
   border-radius: 1.5rem;
   box-shadow: 0 0.4rem 0.8rem #0005;
   display: flex;
-  width: 16rem;
+  width: 18rem;
   height: 16rem;
   flex-direction: column;
   overflow: hidden;
@@ -208,6 +208,34 @@ input[type="number"]::-webkit-outer-spin-button {
   color: white;
 }
 
+.btn-custom-calculate {
+  background-color: transparent;
+  border-color: rgba(24, 106, 59);
+  border-width: 0.15rem;
+  color: rgba(24, 106, 59);
+}
+
+.btn-custom-calculate:hover {
+  background-color: rgba(46, 204, 113, 0.5);
+  border-color: rgba(24, 106, 59);
+  border-width: 0.15rem;
+  color: black;
+}
+
+.btn-custom-reset {
+  background-color: transparent;
+  border-color: rgba(146, 43, 33);
+  border-width: 0.15rem;
+  color: rgba(146, 43, 33);
+}
+
+.btn-custom-reset:hover {
+  background-color: rgba(230, 176, 170);
+  border-color: rgba(146, 43, 33);
+  border-width: 0.15rem;
+  color: black;
+}
+
 .container .row {
   justify-content: center;
 }
@@ -215,22 +243,5 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (max-width: 1000px) {
   td:not(:first-of-type) {
     min-width: 12.1rem;
-  }
-}
-@media (max-width: 480px) {
-  .input-group-addon,
-  .input-group-btn,
-  .input-group .form-control {
-    display: block;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-
-  .input-group {
-    display: block;
-  }
-
-  .datePicker {
-    width: 100%;
   }
 }
