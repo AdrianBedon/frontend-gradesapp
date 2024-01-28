@@ -188,12 +188,10 @@ input[type="number"]::-webkit-outer-spin-button {
   filter: invert(1);
 }
 
-.ig-2 {
-  background-color: rgba(169, 204, 227);
-}
-
-.ig-3 {
-  background-color: rgba(128, 139, 150);
+.center {
+  margin: 1rem;
+  justify-content: center;
+  display: flex;
 }
 
 .btn-custom {

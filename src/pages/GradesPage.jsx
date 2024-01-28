@@ -221,9 +221,11 @@ export const GradesPage = () => {
               </div>
             </article>
           </div>
-          <button type="submit" className="btn btn-primary btn-custom" >
-            Calculate Grades
-          </button>
+          <div className="center">
+            <button type="submit" className="btn btn-primary btn-custom">
+              Calculate Grades
+            </button>
+          </div>
         </form>
         <p></p>
         {gradesT.length === 0 ? (
