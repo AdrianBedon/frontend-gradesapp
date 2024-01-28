@@ -5,15 +5,15 @@ import { calculate, findAll } from "../services/gradeService";
 const initialGrades = [];
 
 const initialFormatCalculateForm = {
-  start1: "2023-01-01",
-  start2: "2023-01-01",
-  start3: "2023-01-01",
-  end1: "2023-01-01",
-  end2: "2023-01-01",
-  end3: "2023-01-01",
-  count1: 0,
-  count2: 0,
-  count3: 0,
+  start1: "",
+  start2: "",
+  start3: "",
+  end1: "",
+  end2: "",
+  end3: "",
+  count1: "",
+  count2: "",
+  count3: "",
 };
 
 export const useGrades = () => {

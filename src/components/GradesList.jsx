@@ -5,7 +5,7 @@ import { GradeContext } from "../context/GradeContext";
 export const GradesList = () => {
   const { grades } = useContext(GradeContext);
   return (
-    <main className="table">
+    <div className="table">
       <section className="table__header">
         <h3>Grades List</h3>
       </section>
@@ -32,6 +32,6 @@ export const GradesList = () => {
           </tbody>
         </table>
       </section>
-    </main>
+    </div>
   );
 };

@@ -18,7 +18,13 @@ body {
   justify-content: center;
 }
 
-main.table {
+main {
+  width: 82vw;
+  height: 90vh;
+}
+
+/*****************************************************Tables*********************************************/
+div.table {
   width: 82vw;
   height: 90vh;
   background-color: #fff5;
@@ -89,8 +95,97 @@ tbody tr:hover {
   background-color: #fff6;
 }
 
-.ig-1 {
-  background-color: rgba(217, 136, 128);
+/********************************Cards******************************/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: rgba(44, 62, 80);
+  border-radius: 1.5rem;
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  display: flex;
+  width: 16rem;
+  height: 16rem;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.card__content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card__title {
+  color: rgba(244, 246, 246);
+  font-size: 1.2rem;
+}
+
+/********************************Inputs*****************************/
+.input__wrapper {
+  position: relative;
+  padding: 15px 0 0;
+}
+
+.input__field {
+  outline: 1.5px solid rgba(244, 246, 246);
+  font-size: 1rem;
+  border-radius: 8px;
+  color: rgba(244, 246, 246);
+  padding: 8px;
+  border: none;
+  padding-right: 32px;
+  background: transparent;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.input__field::placeholder {
+  color: transparent;
+}
+
+.input__field:placeholder-shown ~ .input__label {
+  font-size: 1rem;
+  cursor: text;
+  color: rgba(244, 246, 246);
+  top: 24px;
+}
+
+label,
+input__field:focus ~ .input__label {
+  position: absolute;
+  top: 6px;
+  padding: 0 4px;
+  background-color: rgba(44, 62, 80);
+  display: block;
+  font-size: 14px;
+  left: 8px;
+  color: rgba(244, 246, 246);
+  transition: 0.3s;
+}
+
+.input__field:focus ~ .input__label {
+  color: rgba(163, 228, 215);
+}
+
+.input__field:focus {
+  outline: 1.5px solid rgba(163, 228, 215);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  filter: invert(1);
 }
 
 .ig-2 {
@@ -104,14 +199,14 @@ tbody tr:hover {
 .btn-custom {
   background-color: transparent;
   border-color: black;
-  border-width: .15rem;
+  border-width: 0.15rem;
   color: black;
 }
 
 .btn-custom:hover {
   background-color: #fff5;
   border-color: black;
-  border-width: .15rem;
+  border-width: 0.15rem;
   color: white;
 }
 
