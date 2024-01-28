@@ -99,7 +99,7 @@ tbody tr:hover {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 1.5rem;
   justify-content: center;
   margin-top: 1rem;
 }
