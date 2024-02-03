@@ -16,8 +16,7 @@ export const GradesPage = () => {
     initialFormatCalculateForm
   );
 
-  const { start1, start2, start3, end1, end2, end3, count1, count2, count3 } =
-    formatCalculateForm;
+  const { start1, start2, start3, end1, end2, end3 } = formatCalculateForm;
 
   useEffect(() => {
     getGrades();
@@ -89,23 +88,6 @@ export const GradesPage = () => {
                     End Date
                   </label>
                 </div>
-                <div className="input__wrapper">
-                  <input
-                    id="count1"
-                    type="text"
-                    placeholder="Grades Quantity"
-                    name="count1"
-                    required
-                    className="input__field"
-                    onFocus={(e) => (e.target.type = "number")}
-                    onBlur={(e) => (e.target.type = "text")}
-                    value={count1}
-                    onChange={onInputChange}
-                  />
-                  <label htmlFor="count1" className="input__label">
-                    Grades Quantity
-                  </label>
-                </div>
               </div>
             </article>
             <article className="card">
@@ -145,23 +127,6 @@ export const GradesPage = () => {
                     End Date
                   </label>
                 </div>
-                <div className="input__wrapper">
-                  <input
-                    id="count2"
-                    type="text"
-                    placeholder="Grades Quantity"
-                    name="count2"
-                    required
-                    className="input__field"
-                    onFocus={(e) => (e.target.type = "number")}
-                    onBlur={(e) => (e.target.type = "text")}
-                    value={count2}
-                    onChange={onInputChange}
-                  />
-                  <label htmlFor="count2" className="input__label">
-                    Grades Quantity
-                  </label>
-                </div>
               </div>
             </article>
             <article className="card">
@@ -199,23 +164,6 @@ export const GradesPage = () => {
                   />
                   <label htmlFor="end3" className="input__label">
                     End Date
-                  </label>
-                </div>
-                <div className="input__wrapper">
-                  <input
-                    id="count3"
-                    type="text"
-                    placeholder="Grades Quantity"
-                    name="count3"
-                    required
-                    className="input__field"
-                    onFocus={(e) => (e.target.type = "number")}
-                    onBlur={(e) => (e.target.type = "text")}
-                    value={count3}
-                    onChange={onInputChange}
-                  />
-                  <label htmlFor="count3" className="input__label">
-                    Grades Quantity
                   </label>
                 </div>
               </div>

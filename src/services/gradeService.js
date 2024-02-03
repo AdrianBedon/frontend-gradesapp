@@ -19,9 +19,6 @@ export const calculate = async ({
   end1,
   end2,
   end3,
-  count1,
-  count2,
-  count3,
 }) => {
   try {
     const response = await axios.post(`${BASE_URL}/calculate`, {
@@ -31,9 +28,6 @@ export const calculate = async ({
       end1,
       end2,
       end3,
-      count1,
-      count2,
-      count3,
     });
     console.log(response);
     return response;

@@ -11,9 +11,6 @@ const initialFormatCalculateForm = {
   end1: "",
   end2: "",
   end3: "",
-  count1: "",
-  count2: "",
-  count3: "",
 };
 
 export const useGrades = () => {
