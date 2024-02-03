@@ -110,7 +110,7 @@ tbody tr:hover {
   box-shadow: 0 0.4rem 0.8rem #0005;
   display: flex;
   width: 18rem;
-  height: 16rem;
+  height: 13rem;
   flex-direction: column;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
