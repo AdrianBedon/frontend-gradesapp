@@ -1,0 +1,7 @@
+organization=test-proyectos-personales
+projectKey=frontend-gradesapp
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.58807
+dashboardUrl=https://sonarcloud.io/dashboard?id=frontend-gradesapp
+ceTaskId=AZRMl0u-3xI7mdAwymvC
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZRMl0u-3xI7mdAwymvC
