@@ -3,5 +3,5 @@ projectKey=frontend-gradesapp
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.58807
 dashboardUrl=https://sonarcloud.io/dashboard?id=frontend-gradesapp
-ceTaskId=AZRM0dp_768UrkA1V_cL
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZRM0dp_768UrkA1V_cL
+ceTaskId=AZRM4qTcinbjIry0mntG
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZRM4qTcinbjIry0mntG
