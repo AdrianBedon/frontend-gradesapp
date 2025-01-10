@@ -38,10 +38,10 @@ def run_selenium_tests():
     try:
         driver.get("http://localhost:3000/frontend-gradesapp")
         assert "Grades App" in driver.title, "Título de la página no coincide"
-        print("✔ Prueba de título exitosa.")
+        print("Prueba de título exitosa!!!")
     finally:
         WebDriverSingleton.close_driver(driver)
-        print("✔ Todas las pruebas de Selenium finalizaron correctamente.")
+        print("Todas las pruebas de Selenium finalizaron correctamente!!!")
 
 if __name__ == "__main__":
     run_selenium_tests()
