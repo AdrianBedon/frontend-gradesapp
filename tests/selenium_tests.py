@@ -36,7 +36,7 @@ def run_selenium_tests():
         raise Exception("Error iniciando WebDriver")
 
     try:
-        driver.get("http://localhost:5173/frontend-gradesapp")
+        driver.get("http://localhost:3000/frontend-gradesapp")
         assert "Grades App" in driver.title, "Título de la página no coincide"
         print("✔ Prueba de título exitosa.")
     finally:
